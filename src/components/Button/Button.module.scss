@@ -1,0 +1,50 @@
+@import "../../scss/variables.scss";
+
+.button {
+        position: relative;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        font-size: 1.33rem;
+        background-color: transparent;
+        border: none;
+        border-radius: 2rem;
+        color: $text-colorDark;
+        cursor: pointer;
+        transition: 0.4s;
+    
+        &:hover {
+            background-color: $gray-30;
+            border-radius: 2rem;
+    
+        }      
+}
+
+.full {
+    width: 100% !important;
+}
+
+
+
+
+
+
+// .button {
+//     display: flex;
+//     width: 224px;
+//     height: 50px;
+//     gap: 1rem;
+//     justify-content: center;
+//     align-items: center;
+//     padding: 0 2rem;
+//     font-size: 1.25rem;
+//     background-color: $blue;
+//     border: none;
+//     border-radius: 2rem;
+//     color: $text-color;
+//     cursor: pointer;
+//     transition: 0.4s;
+    
+// }

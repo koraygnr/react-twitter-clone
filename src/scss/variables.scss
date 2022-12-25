@@ -1,0 +1,12 @@
+$primary: #15202B;
+$text-color: #fff;
+$text-colorDark: #f7f9f9;
+$blue: #1d9bf0;
+$gray: #6E767D;
+$gray-30: #6e767d30;
+$dark-gray: #1e2732; // gündem background
+
+@mixin text-title {
+    font-size: 19px ;
+    font-weight: bold;
+}

@@ -1,0 +1,11 @@
+@import "../../scss/variables.scss";
+
+.themeButton {
+    width: 224px;
+    height: 50px;
+    background-color: $blue;
+
+    &:hover {
+        background-color: #1a89d3;
+    }
+}
