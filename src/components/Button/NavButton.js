@@ -10,7 +10,7 @@ function NavButton({children, notify, active, ...props}) {
     className={cn(styles.navButton, active && styles.active)} {...props}>
         {children}
         {
-        notify &&
+        notify > 0 &&
         <span className={styles.notify}>{notify}</span>
         }
     </Button>

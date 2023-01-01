@@ -2,6 +2,7 @@
 
 .themeButton {
     height: 50px;
+    min-width: 50px;
     background-color: $blue;
 
     &:hover {

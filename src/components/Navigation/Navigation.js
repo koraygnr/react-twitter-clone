@@ -4,45 +4,82 @@ import NavButton from '../Button/NavButton'
 import Button from '../Button/Button'
 import ThemeButton from '../Button/ThemeButton'
 import ProfileBox from '../ProfileBox/ProfileBox'
-import { TwitterIcon, HomeIconFilled, HomeIconOutlined, SearchIcon, SearchIconBold, ExploreIconFilled, ExploreIconOutlined, NotificationsIconFilled, NotificationsIconOutlined, MessagesIconFilled, MessagesIconOutlined, BookmarkIconOutlined, ListIconOutlined, ListIconFilled, ProfileIconOutlined, ProfileIconFilled, MoreIconOutlined } from "../Icons"
+import { TwitterIcon, HomeIconFilled, HomeIconOutlined, SearchIcon, SearchIconBold, ExploreIconFilled, ExploreIconOutlined, NotificationsIconFilled, NotificationsIconOutlined, MessagesIconFilled, MessagesIconOutlined, BookmarkIconOutlined, ListIconOutlined, ListIconFilled, ProfileIconOutlined, ProfileIconFilled, MoreIconOutlined, CreateTweetIcon } from "../Icons"
 
+const menuItems = [
+    {
+        key: "twitter",
+        icon: <TwitterIcon />,
+        title: "",
+        notify: 0
+    },
+    {
+        key: "home",
+        icon: <HomeIconOutlined />,
+        title: "Anasayfa",
+        notify: 0
+    },
+    {
+        key: "Keşfet",
+        icon: <ExploreIconOutlined />,
+        title: "Keşfet",
+        notify: 0
+    },
+    {
+        key: "Bildirimler",
+        icon: <NotificationsIconOutlined />,
+        title: "Bildirimler",
+        notify: 0
+    },
+    {
+        key: "Mesajlar",
+        icon: <MessagesIconOutlined />,
+        title: "Mesajlar",
+        notify: 5
+    },
+    {
+        key: "Yer İşaretleri",
+        icon: <BookmarkIconOutlined />,
+        title: "Yer İşaretleri",
+        notify: 0
+    },
+    {
+        key: "Listeler",
+        icon: <ListIconOutlined />,
+        title: "Listeler",
+        notify: 0
+    },
+    {
+        key: "Profil",
+        icon: <ProfileIconOutlined />,
+        title: "Profil",
+        notify: 0
+    },
+    {
+        key: "Daha fazla",
+        icon: <MoreIconOutlined />,
+        title: "Daha fazla",
+        notify: 0
+    }
+]
 
 function Navigation({flat = false}) {
   return (
     <nav className={styles.navbar}>
-        <NavButton>
-            <TwitterIcon />
-        </NavButton>
-        <NavButton active="active" >
-            <HomeIconFilled /> <span>Anasayfa</span>
-        </NavButton>
-        <NavButton >
-            <ExploreIconOutlined /><span>Keşfet</span>
-        </NavButton>
-        <NavButton notify={6}>
-            <NotificationsIconFilled /><span>Bildirimler</span>
-        </NavButton>
-        <NavButton>
-            <MessagesIconFilled /><span>Mesajlar</span>
-        </NavButton>
-        <NavButton>
-            <BookmarkIconOutlined /><span>Yer İşaretleri</span>
-        </NavButton>
-        <NavButton>
-            <ListIconOutlined /><span>Listeler</span>
-        </NavButton>
-        <NavButton>
-            <ProfileIconOutlined /><span>Profil</span>
-        </NavButton>
-        <NavButton>
-            <MoreIconOutlined /><span>Daha fazla</span>
-        </NavButton>
-        <ThemeButton full>
-            <span>Tweetle</span>
-        </ThemeButton>
-        <div className={styles.profileBox}>
-            <ProfileBox />
-        </div>
+        {
+           menuItems.map( item => (
+            <NavButton 
+                key={item.key}
+                notify={item.notify}
+            >
+                {item.icon}
+                {
+                    item.title.length > 0 && !flat &&
+                    <span>{item.title}</span>
+                } 
+            </NavButton>
+           )) 
+        }
     </nav>
 
   )
