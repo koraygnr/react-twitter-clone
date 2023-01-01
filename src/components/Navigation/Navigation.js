@@ -7,7 +7,7 @@ import ProfileBox from '../ProfileBox/ProfileBox'
 import { TwitterIcon, HomeIconFilled, HomeIconOutlined, SearchIcon, SearchIconBold, ExploreIconFilled, ExploreIconOutlined, NotificationsIconFilled, NotificationsIconOutlined, MessagesIconFilled, MessagesIconOutlined, BookmarkIconOutlined, ListIconOutlined, ListIconFilled, ProfileIconOutlined, ProfileIconFilled, MoreIconOutlined } from "../Icons"
 
 
-function Navigation() {
+function Navigation({flat = false}) {
   return (
     <nav className={styles.navbar}>
         <NavButton>

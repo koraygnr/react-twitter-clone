@@ -10,3 +10,22 @@ $dark-gray: #1e2732; // gündem background
     font-size: 19px ;
     font-weight: bold;
 }
+
+// B r e a k P o i n t s
+$tablet: 980px;
+$desktop: 1270px;
+
+@mixin breakpoint($point) {
+    @if $point == tablet {
+        @media (min-width: $tablet){
+            @content;
+        }
+    }
+    @if $point == desktop {
+        @media (min-width: $desktop){
+            @content;
+        }
+    }
+}
+
+
