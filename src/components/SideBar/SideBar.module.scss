@@ -7,6 +7,10 @@
     padding: 0 20px;
     height: 100vh;
 
+    @include breakpoint(desktop){
+        padding-right: 40px;
+    }
+
     .tweetButton {
         display: flex;
         justify-content: center;
