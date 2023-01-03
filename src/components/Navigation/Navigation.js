@@ -4,66 +4,75 @@ import NavButton from '../Button/NavButton'
 import Button from '../Button/Button'
 import ThemeButton from '../Button/ThemeButton'
 import ProfileBox from '../ProfileBox/ProfileBox'
-import { TwitterIcon, HomeIconFilled, HomeIconOutlined, SearchIcon, SearchIconBold, ExploreIconFilled, ExploreIconOutlined, NotificationsIconFilled, NotificationsIconOutlined, MessagesIconFilled, MessagesIconOutlined, BookmarkIconOutlined, ListIconOutlined, ListIconFilled, ProfileIconOutlined, ProfileIconFilled, MoreIconOutlined, CreateTweetIcon } from "../Icons"
+import { TwitterIcon, HomeIconFilled, HomeIconOutlined, SearchIcon, SearchIconBold, ExploreIconFilled, ExploreIconOutlined, NotificationsIconFilled, NotificationsIconOutlined, MessagesIconFilled, MessagesIconOutlined, BookmarkIconOutlined, BookmarkIconFilled, ListIconOutlined, ListIconFilled, ProfileIconOutlined, ProfileIconFilled, MoreIconOutlined, CreateTweetIcon } from "../Icons"
 
 const menuItems = [
     {
         key: "twitter",
         icon: <TwitterIcon />,
+        iconSelected: <TwitterIcon />,
         title: "",
         notify: 0
     },
     {
         key: "home",
         icon: <HomeIconOutlined />,
+        iconSelected: <HomeIconFilled />,
         title: "Anasayfa",
         notify: 0
     },
     {
-        key: "Keşfet",
+        key: "explore",
         icon: <ExploreIconOutlined />,
+        iconSelected: <ExploreIconFilled />,
         title: "Keşfet",
         notify: 0
     },
     {
-        key: "Bildirimler",
+        key: "notification",
         icon: <NotificationsIconOutlined />,
+        iconSelected: <NotificationsIconFilled />,
         title: "Bildirimler",
         notify: 0
     },
     {
-        key: "Mesajlar",
+        key: "messages",
         icon: <MessagesIconOutlined />,
+        iconSelected: <MessagesIconFilled />,
         title: "Mesajlar",
         notify: 5
     },
     {
-        key: "Yer İşaretleri",
+        key: "bookmark",
         icon: <BookmarkIconOutlined />,
+        iconSelected: <BookmarkIconFilled />,
         title: "Yer İşaretleri",
         notify: 0
     },
     {
-        key: "Listeler",
+        key: "list",
         icon: <ListIconOutlined />,
+        iconSelected: <ListIconFilled />,
         title: "Listeler",
         notify: 0
     },
     {
-        key: "Profil",
+        key: "profile",
         icon: <ProfileIconOutlined />,
+        iconSelected: <ProfileIconFilled />,
         title: "Profil",
         notify: 0
     },
     {
-        key: "Daha fazla",
+        key: "more",
         icon: <MoreIconOutlined />,
+        iconSelected: <MoreIconOutlined />,
         title: "Daha fazla",
         notify: 0
     }
 ]
 
-function Navigation({flat = false}) {
+function Navigation({flat = false, selectedKey = "home"}) {
   return (
     <nav className={styles.navbar}>
         {
@@ -71,8 +80,12 @@ function Navigation({flat = false}) {
             <NavButton 
                 key={item.key}
                 notify={item.notify}
+                selected={selectedKey === item.key}
             >
-                {item.icon}
+                { selectedKey === item.key 
+                    ? item.iconSelected 
+                    : item.icon
+                }
                 {
                     item.title.length > 0 && !flat &&
                     <span>{item.title}</span>
