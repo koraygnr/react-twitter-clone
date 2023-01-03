@@ -4,10 +4,10 @@ import Button from './Button'
 import cn from "classnames"
 
 
-function NavButton({children, notify, selected, ...props}) {
+function NavButton({ to, children, notify, selected, className, ...props }) {
   return (
     <Button
-    className={cn(styles.navButton, selected && styles.selected)} {...props}>
+    className={cn(styles.navButton, selected && styles.selected, className )} to={to} {...props}>
         {children}
         {
         notify > 0 &&

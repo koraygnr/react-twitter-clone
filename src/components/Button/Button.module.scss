@@ -13,21 +13,17 @@
         border-radius: 2rem;
         color: $text-colorDark;
         cursor: pointer;
-        transition: 0.4s;
     
         &:hover {
             background-color: $gray-30;
             border-radius: 2rem;
-    
+            transition: 0.4s background-color;
         }      
 }
 
 .full {
     width: 100% !important;
 }
-
-
-
 
 
 

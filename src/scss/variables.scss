@@ -22,7 +22,7 @@ $desktop: 1270px;
             @content;
         }
     }
-    @if $point == desktop {
+    @if $point == 0 {
         @media (min-width: $desktop){
             @content;
         }
