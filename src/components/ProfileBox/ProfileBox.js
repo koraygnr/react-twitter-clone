@@ -20,7 +20,7 @@ function ProfileBox({ flat, name = "Koray Güner", slug = "korayguner" }) {
               <p className={styles.slug}>@{slug}</p>
             </div>
             <div className={styles.icon}>
-              <More2Icon color="white"/>
+              <More2Icon />
             </div>
             </>
           )

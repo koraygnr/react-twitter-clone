@@ -21,6 +21,10 @@
 
     .icon {
         margin-left: auto;
+
+        svg {
+            fill: var(--c-text-color);
+        }
     }
 
 }
