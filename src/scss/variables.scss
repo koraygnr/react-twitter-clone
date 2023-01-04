@@ -1,12 +1,38 @@
-$primary: #15202B;
-$text-color: #fff;
-$text-colorDark: #f7f9f9;
-$blue: #1d9bf0;
-$gray: #6E767D;
-$gray-30: #6e767d30;
-$dark-gray: #1e2732; // gündem background
-$border-color: #38444d;
+// T h e m e C o l o r s
+.Light:root {
+    --c-primary: #ffffff;
+    --c-text-color: #0f1419;
+    --c-blue: #1d9bf0;
+    --c-blue-hover: #1a89d3;
+    --c-gray: #6E767D;
+    --c-gray-30: #6e767d30;
+    --c-dark-gray: #1e2732; // gündem background
+    --c-border-color: #38444d;
+}
 
+.Dim:root {
+    --c-primary: #15202B;
+    --c-text-color: #f7f9f9;
+    --c-blue: #1d9bf0;
+    --c-blue-hover: #1a89d3;
+    --c-gray: #6E767D;
+    --c-gray-30: #6e767d30;
+    --c-dark-gray: #1e2732; // gündem background
+    --c-border-color: #38444d;
+}
+
+.Dark:root {
+    --c-primary: #000;
+    --c-text-color: #e7e9ea;
+    --c-blue: #1d9bf0;
+    --c-blue-hover: #1a89d3;
+    --c-gray: #6E767D;
+    --c-gray-30: #6e767d30;
+    --c-dark-gray: #1e2732; // gündem background
+    --c-border-color: #38444d;
+}
+
+// T i t l e  S t y l e
 @mixin text-title {
     font-size: 19px ;
     font-weight: bold;
@@ -28,5 +54,3 @@ $desktop: 1270px;
         }
     }
 }
-
-

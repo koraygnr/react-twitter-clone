@@ -3,9 +3,15 @@
 .themeButton {
     height: 50px;
     min-width: 50px;
-    background-color: $blue;
+    background-color: var(--c-blue);
 
     &:hover {
-        background-color: #1a89d3;
+        background-color: var(--c-blue-hover);
+    }
+
+    span {
+        color: #fff;
+        font-weight: bold;
+        font-size: 17px;
     }
 }

@@ -4,7 +4,7 @@
     svg {
         width: 26px;
         height: 26px;
-        fill: $text-color;
+        fill: var(--c-text-color);
     }
 
     span {
@@ -13,7 +13,7 @@
 }
 
 .selected {
-        color: $text-color;
+        color: var(--c-text-color);
         font-weight: bold;
 
 }
@@ -28,9 +28,9 @@
     display: flex;
     align-items: center;
     font-size: 11px;
-    border: 1px solid $primary;
-    background-color: $blue;
-    color: $text-color;
+    border: 1px solid var(--c-primary);
+    background-color: var(--c-blue);
+    color: var(--c-text-color);
 }
 
 
