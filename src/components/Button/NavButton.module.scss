@@ -10,12 +10,24 @@
     span {
         margin-right: 15px;
     }
+
+    &:global(.twitter){
+        svg{
+            width: 30px;
+            height: 30px;
+            fill: var(--c-blue) ;
+
+            :global(html:not(.Light)) & {
+                fill: var(--c-text-color);
+            }
+        }
+    }
+    
 }
 
 .selected {
         color: var(--c-text-color);
         font-weight: bold;
-
 }
 
 .notify {
@@ -31,6 +43,10 @@
     border: 1px solid var(--c-primary);
     background-color: var(--c-blue);
     color: var(--c-text-color);
+
+    :global(html.Light) & {
+        color: white !important;
+    }
 }
 
 

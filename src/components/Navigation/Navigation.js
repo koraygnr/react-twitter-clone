@@ -3,6 +3,7 @@ import styles from "./Navigation.module.scss"
 import NavButton from '../Button/NavButton'
 import menuItems from '../../constants/menuItems'
 import { useLocation } from 'react-router-dom'
+import cn from "classnames"
 
 function Navigation({flat = false}) {
 
@@ -16,8 +17,8 @@ function Navigation({flat = false}) {
                 key={i}
                 notify={item.notify}
                 selected={location === item.path}
-                to={item.path === "/twitter" || item.key === "/home"  ? "" : item.path }
-                className={styles.navButton}
+                to={item.path}
+                className={cn(styles.navButton, item.key)}
             >
                 { location === item.path 
                     ? item.iconSelected 

@@ -3,6 +3,7 @@ import { TwitterIcon, HomeIconFilled, HomeIconOutlined, SearchIcon, SearchIconBo
 
 const menuItems = [
     {
+        key: "twitter",
         path: "/",
         icon: <TwitterIcon />,
         iconSelected: <TwitterIcon />,
@@ -10,6 +11,7 @@ const menuItems = [
         notify: 0
     },
     {
+        key: "home",
         path: "/",
         icon: <HomeIconOutlined />,
         iconSelected: <HomeIconFilled />,
@@ -17,6 +19,7 @@ const menuItems = [
         notify: 0
     },
     {
+        key: "explore",
         path: "/explore",
         icon: <ExploreIconOutlined />,
         iconSelected: <ExploreIconFilled />,
@@ -24,6 +27,7 @@ const menuItems = [
         notify: 0
     },
     {
+        key: "notifications",
         path: "/notifications",
         icon: <NotificationsIconOutlined />,
         iconSelected: <NotificationsIconFilled />,
@@ -31,6 +35,7 @@ const menuItems = [
         notify: 0
     },
     {
+        key: "messages",
         path: "/messages",
         icon: <MessagesIconOutlined />,
         iconSelected: <MessagesIconFilled />,
@@ -38,6 +43,7 @@ const menuItems = [
         notify: 5
     },
     {
+        key: "bookmarks",
         path: "/bookmarks",
         icon: <BookmarkIconOutlined />,
         iconSelected: <BookmarkIconFilled />,
@@ -45,6 +51,7 @@ const menuItems = [
         notify: 0
     },
     {
+        key: "lists",
         path: "/lists",
         icon: <ListIconOutlined />,
         iconSelected: <ListIconFilled />,
@@ -52,6 +59,7 @@ const menuItems = [
         notify: 0
     },
     {
+        key: "profile",
         path: "/profile",
         icon: <ProfileIconOutlined />,
         iconSelected: <ProfileIconFilled />,
@@ -59,6 +67,7 @@ const menuItems = [
         notify: 0
     },
     {
+        key: "more",
         path: "/more",
         icon: <MoreIconOutlined />,
         iconSelected: <MoreIconOutlined />,
