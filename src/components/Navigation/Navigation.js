@@ -10,7 +10,7 @@ function Navigation({flat = false}) {
     let location = useLocation().pathname
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={cn(styles.navbar, flat && styles.flat)}>
         {
            menuItems.map( (item, i) => (
             <NavButton 
