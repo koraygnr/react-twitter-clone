@@ -32,5 +32,6 @@ export { default as SearchIconBold } from "./SearchIconBold"
 export { default as ShareIcon } from "./ShareIcon"
 export { default as SurveyIcon } from "./SurveyIcon"
 export { default as TwitterIcon } from "./TwitterIcon"
+export { default as Statistics } from "./Statistics"
 
 

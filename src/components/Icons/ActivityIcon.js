@@ -18,3 +18,4 @@ function ActivityIcon({color}) {
 }
 
 export default ActivityIcon;
+
