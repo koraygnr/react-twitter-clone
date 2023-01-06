@@ -6,6 +6,7 @@ import SideBar from '../SideBar/SideBar';
 import Main from '../Main/Main';
 import Extra from '../Extra/Extra';
 import { Outlet } from 'react-router-dom';
+import Header from '../Header/Header';
 
 
 function Layout() {
@@ -13,9 +14,12 @@ function Layout() {
   return (
     <div className={styles.layout}>
       <SideBar flat={size.width < breakPoints.desktop_size}/>
-      <Main><Outlet /></Main>
+      <Main>
+        <Header />
+        <Outlet />
+      </Main>
       {
-        size.width > breakPoints.tablet_size && <Extra>extra</Extra>
+        size.width > breakPoints.tablet_size && <Extra/>
       }
     </div>
   )
