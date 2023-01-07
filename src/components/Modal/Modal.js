@@ -1,13 +1,23 @@
-import React from 'react'
-import Button from '../Button/Button'
+import React, { useState } from 'react'
 import ThemeButton from '../Button/ThemeButton'
 import ProfilePhoto from '../ProfilePhoto/ProfilePhoto'
 import styles from "./Modal.module.scss"
 import IconButton from "../Button/IconButton"
 import { CloseIcon, MediaIcon, GifIcon, SurveyIcon, EmojiIcon, ActivityIcon, LocationIcon } from '../Icons'
+import { useDispatch } from 'react-redux'
+import { addTweet } from '../../redux/tweets/tweetsSlice'
 
 
 function Modal({ setIsOpen }) {
+    const dispatch = useDispatch()
+    const [ text, setText ] = useState("")
+    
+    const onSubmit = () => {
+        const currentDate = new Date()
+        dispatch(addTweet(text, currentDate))
+        setIsOpen(false)
+    }
+
     return (
         <div className={styles.overlay} 
             onClick={()=> setIsOpen(false)}
@@ -29,10 +39,13 @@ function Modal({ setIsOpen }) {
                     <div className={styles.tweet}>
                         <textarea
                             className={styles.textarea}
+                            value={text}
+                            onChange={(e)=>setText(e.target.value)}
                             placeholder="Neler oluyor?"
                             name=""
                             rows="6"
                             spellCheck="false"
+                            autoFocus
                         />
                     </div>
                 </div>
@@ -72,6 +85,7 @@ function Modal({ setIsOpen }) {
                     <div className={styles.footerRightSide}>
                         <ThemeButton 
                         className={styles.tweetButton}
+                        onClick={onSubmit}
                         >
                         Tweetle
                         </ThemeButton>
