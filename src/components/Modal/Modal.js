@@ -86,6 +86,7 @@ function Modal({ setIsOpen }) {
                         <ThemeButton 
                         className={styles.tweetButton}
                         onClick={onSubmit}
+                        disabled={text.trim() === ""}
                         >
                         Tweetle
                         </ThemeButton>
