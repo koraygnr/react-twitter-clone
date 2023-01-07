@@ -1,6 +1,7 @@
 import React from 'react'
 import Tweet from '../../components/Tweet/Tweet'
 import { useSelector } from 'react-redux'
+import TweetGenerator from '../../components/TweetGenerator/TweetGenerator'
 
 function Home() {
 
@@ -8,6 +9,7 @@ function Home() {
   
   return (
     <div>
+      <TweetGenerator />
       {
         tweets && tweets.map( (tweet, i) => (
           <Tweet tweet={tweet} key={i}/>

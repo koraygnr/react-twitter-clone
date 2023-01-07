@@ -1,0 +1,77 @@
+@import "../../scss/variables.scss";
+
+.tweetGenerator{
+    display: flex;
+    height: 116px;
+    padding: 4px 16px;
+    width: 100%;
+    border-bottom: 1px solid var(--c-border-color);
+
+    .avatar {
+        padding-top: 12px;
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+        padding: 12px 0 0 12px;
+
+        .tweet {
+            width: 100%;
+
+            .textarea {
+                resize: none;
+                background-color: transparent;
+                width: 100%;
+                border: none;
+                color: var(--c-text-color);
+                font-size: 1.3rem;
+                font-family: inherit;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+            
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .footerLeftSide {
+            display: flex;
+            margin-left: -8px;
+            
+            svg {
+                fill: var(--c-blue);
+            }
+
+        }
+        .footerRightSide {
+    
+            .tweetButton {
+                width: 86px;
+                height: 34px;
+                font-size: 1rem;
+                font-weight: bold;
+                color: white;
+            }
+            button:disabled {
+                cursor: default;
+                background-color: #1d9cf03a;
+                color: var(--c-gray);
+
+                :global(html.Light) & {
+                    color: white !important;
+                }
+            }
+        }
+    }
+    }
+
+}
