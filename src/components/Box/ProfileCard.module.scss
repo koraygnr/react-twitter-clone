@@ -1,0 +1,48 @@
+@import "../../scss/variables.scss";
+
+.profileCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72px;
+    padding: 0 16px 0 16px;
+    cursor: pointer;
+
+    &:hover {
+        transition: 0.4s;
+        background-color: var(--c-gray-30);
+    }
+
+    .leftSide {
+        display: flex;
+
+        .body {
+            margin-left: 10px;
+            .name {
+                font-size: 1rem;
+                font-weight: bold;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            .slug {
+                color: var(--c-gray);
+            }
+        }
+    }
+
+    .rightSide {
+        margin-left: auto;
+        button {
+            background-color: var(--c-text-color);
+            color: var(--c-primary);
+            width: 86px;
+            height: 34px;
+            font-size: 14px;
+            font-weight: bold;
+            &:hover {
+                background-color: var(--c-gray);
+            }
+        }
+    }
+}
