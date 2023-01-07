@@ -1,14 +1,12 @@
 @import "../../scss/variables.scss";
 
 .layout {
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
     min-height: 100vh;
     max-width: 670px;
     margin: 0 auto;
     
     @include breakpoint(tablet) {
-        grid-template-columns: auto 1fr 300px;
         max-width: 1060px;
     }
     @include breakpoint(desktop) {

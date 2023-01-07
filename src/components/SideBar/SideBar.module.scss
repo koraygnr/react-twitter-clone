@@ -1,11 +1,15 @@
 @import "../../scss/variables.scss";
 
 .sideBar {
+    position: sticky;
+    top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 20px;
     height: 100vh;
+    max-width: 275px;
+    padding: 0 20px;
+    z-index: 100;
 
     @include breakpoint(desktop){
         padding-right: 40px;

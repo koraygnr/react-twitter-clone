@@ -1,11 +1,6 @@
 @import "../../scss/variables.scss";
 
 .iconButton {
+    position: inherit;
     padding: 8px;
-
-    // &:hover {
-    //     svg {
-    //         fill: red !important;
-    //     }
-    // }
 }
