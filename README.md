@@ -1,4 +1,16 @@
-# Getting Started with Create React App
+# Twitter Ön Yüz Klonu Çalışması
+
+Bu proje React, React Router, Redux/Toolkit, Scss teknolojileri kullanılarak twiiter.com'un arayüzü tasarlanmıştır. 
+Teşekkürler @ademilter ✌️
+
+Demo = https://twitterclone-reactjs.netlify.app/
+
+##### Kullanılan teknolojiler :
+- React
+- React Router
+- Redux/Toolkit
+- Scss
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
