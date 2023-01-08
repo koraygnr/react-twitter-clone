@@ -20,7 +20,6 @@ export const tweetsSlice = createSlice({
     reducers: {
         addTweet:{
             reducer:(state, action) => {
-                console.log(action.payload);
                 state.tweets.unshift(action.payload)
             },
             
@@ -35,12 +34,10 @@ export const tweetsSlice = createSlice({
                         reply: Math.floor(Math.random() * 20),
                         retweet: Math.floor(Math.random() * 10),
                         like:Math.floor(Math.random() * 300)
-
                     }
                 }
             },
         }
-
     },
  
 })

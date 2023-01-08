@@ -1,0 +1,47 @@
+@import "../../scss/variables.scss";
+
+.dropMenu {
+    position: absolute;
+    top: 250px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    border-radius: 1rem;
+    background-color: var(--c-primary);
+    box-shadow: rgb(136 153 166 / 20%) 0px 0px 15px, rgb(136 153 166 / 15%) 0px 0px 3px 1px;
+
+    .content {
+        div {
+            display: flex;
+            align-items: center;
+            height: 60px;
+            font-size: 1rem;
+            font-weight: bold;
+            width: 100%;
+            cursor: pointer;
+    
+            &:hover {
+                background-color: var(--c-gray-30);
+            }
+    
+            &:first-child {
+                border-radius: 1rem 1rem 0 0;
+            }
+    
+            &:last-child {
+                border-radius: 0 0 1rem 1rem;
+            }
+    
+            .label{
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                padding: 0 1rem;
+                height: 100%;
+                width: 100%;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -7,7 +7,6 @@ import Messages from "../pages/Messages/Messages";
 import Bookmarks from "../pages/Bookmarks/Bookmarks";
 import Lists from "../pages/Lists/Lists";
 import Profile from "../pages/Profile/Profile";
-import More from "../pages/More/More";
 
 const Router = createBrowserRouter([
   {
@@ -41,10 +40,6 @@ const Router = createBrowserRouter([
       {
         path:"/profile",
         element: <Profile />
-      },
-      {
-        path:"/more",
-        element: <More />
       }
     ]
   }
