@@ -8,7 +8,7 @@ const whoToFollow = [
     {
         slug: "korayguner",
         name: "Koray Güner",
-        img: "https://pbs.twimg.com/profile_images/1598240171006255105/famISA6X_400x400.jpg",
+        img: "https://pbs.twimg.com/profile_images/1617237192404869125/YXdLtbgc_400x400.jpg",
         url: "https://twitter.com/korayguner"
     },
     {

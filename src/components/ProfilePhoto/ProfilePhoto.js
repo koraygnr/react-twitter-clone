@@ -2,7 +2,7 @@ import React from 'react'
 import styles from "./ProfilePhoto.module.scss"
 import cn from "classnames"
 
-const initialSrc = "https://pbs.twimg.com/profile_images/1598240171006255105/famISA6X_400x400.jpg"
+const initialSrc = "https://pbs.twimg.com/profile_images/1617237192404869125/YXdLtbgc_400x400.jpg"
 
 function ProfilePhoto({ src = initialSrc, alt, size = 47 }) {
   return (
